@@ -17,7 +17,7 @@ public class LoginApp extends Application {
         StackPane mainPane = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         Scene scene = new Scene(mainPane);
         stage.setScene(scene);
-        stage.setTitle("Transport Management System");
+        stage.setTitle("Logistic Management System");
         stage.show();
 
     }
