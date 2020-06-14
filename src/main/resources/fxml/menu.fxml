@@ -59,7 +59,7 @@
                     <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../image/lorries.png" />
+                                <Image url="@../image/lorry.png" />
                             </image>
                         </ImageView>
                         <Label alignment="CENTER" layoutX="74.0" layoutY="132.0" text="Lorries" textFill="WHITE">
