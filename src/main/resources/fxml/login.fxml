@@ -31,7 +31,7 @@
                                 <Insets left="50.0" />
                             </padding>
                         </Label>
-                        <Button fx:id="loginButton" layoutX="132.0" layoutY="247.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="166.0" text="Login" />
+                        <Button fx:id="loginButton" layoutX="132.0" layoutY="247.0" mnemonicParsing="false" onAction="#logIntoSystem" prefHeight="30.0" prefWidth="166.0" text="Login" />
                         <TextField fx:id="userNameTextField" layoutX="89.0" layoutY="131.0" promptText="user name" />
                         <TextField fx:id="passwordTextField" layoutX="89.0" layoutY="174.0" promptText="password" />
                     </children>
