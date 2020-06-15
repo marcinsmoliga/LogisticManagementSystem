@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox>
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="1100.0" styleClass="gradient-light" />
+                  <TabPane prefHeight="550.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Add User">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox prefHeight="519.0" prefWidth="1100.0">
+                                       <children>
+                                          <AnchorPane prefHeight="91.0" prefWidth="350.0">
+                                             <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="84.0" text="User Details" />
+                                                <TextField layoutX="84.0" layoutY="79.0" />
+                                                <TextField layoutX="84.0" layoutY="260.0" />
+                                                <TextField layoutX="84.0" layoutY="326.0" />
+                                                <TextField layoutX="84.0" layoutY="169.0" />
+                                                <Label layoutX="129.0" layoutY="54.0" text="First Name" />
+                                                <Label layoutX="112.0" layoutY="231.0" text="Date of Birth" />
+                                                <Label layoutX="126.0" layoutY="140.0" text="Last Name" />
+                                                <Label layoutX="105.0" layoutY="300.0" prefHeight="18.0" prefWidth="98.0" text="Phone" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="200.0" prefWidth="350.0">
+                                             <children>
+                                                <Label prefHeight="31.0" prefWidth="124.0" text="User Premissions" />
+                                                <TextField layoutX="113.0" layoutY="146.0" />
+                                                <TextField layoutX="113.0" layoutY="216.0" />
+                                                <TextField layoutX="113.0" layoutY="295.0" />
+                                                <TextField layoutX="113.0" layoutY="79.0" />
+                                                <TextField layoutX="113.0" layoutY="367.0" />
+                                                <Label layoutX="147.0" layoutY="52.0" text="Status" />
+                                                <Label layoutX="139.0" layoutY="185.0" text="Total volume [m3]]" />
+                                                <Label layoutX="139.0" layoutY="114.0" text="Available capacity [kg]" />
+                                                <Label layoutX="137.0" layoutY="260.0" text="Available volume [m3]]" />
+                                                <Label layoutX="138.0" layoutY="334.0" prefHeight="18.0" prefWidth="98.0" text="Current Location" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="200.0" prefWidth="300.0">
+                                             <children>
+                                                <Label prefHeight="25.0" prefWidth="65.0" text="Insurance" />
+                                                <Label layoutX="71.0" layoutY="47.0" text="Insurance Policy Number" />
+                                                <TextField layoutX="63.0" layoutY="74.0" />
+                                                <Label layoutX="91.0" layoutY="118.0" text="Date Of Purchase" />
+                                                <TextField layoutX="63.0" layoutY="150.0" />
+                                                <Label layoutX="91.0" layoutY="197.0" text="Expiry Date" />
+                                                <TextField layoutX="63.0" layoutY="234.0" />
+                                                <AnchorPane layoutX="100.0" layoutY="442.0" prefHeight="62.0" prefWidth="142.0">
+                                                   <children>
+                                                      <Button layoutX="74.0" layoutY="18.0" mnemonicParsing="false" text="Save" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Show All Users">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
