@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
    <children>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="sidebar" stylesheets="@../css/style.css">
          <children>
@@ -51,7 +51,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="400.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="signInPane" layoutX="400.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #FFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="14.0" layoutY="68.0" prefHeight="55.0" prefWidth="241.0" text="Welcome Back,">
                <font>
@@ -78,12 +78,12 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Label>
-            <JFXButton buttonType="RAISED" layoutX="67.0" layoutY="395.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="241.0" styleClass="loginButton" stylesheets="@../css/style.css" text="Login">
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="67.0" layoutY="395.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#logIntoSystem" prefHeight="35.0" prefWidth="241.0" styleClass="loginButton" stylesheets="@../css/style.css" text="Login">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
             <Label layoutX="125.0" layoutY="450.0" text="New User?" />
-            <Label layoutX="188.0" layoutY="450.0" text="Sign Up">
+            <Label fx:id="registrationLabel" layoutX="200.0" layoutY="450.0" text="Sign Up" textFill="#2595a2">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

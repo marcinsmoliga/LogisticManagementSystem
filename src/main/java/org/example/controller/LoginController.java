@@ -1,14 +1,18 @@
 package org.example.controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -17,25 +21,21 @@ import java.io.IOException;
 public class LoginController {
 
     @FXML
+    private Label registrationLabel;
+
+    @FXML
+    private Pane signInPane;
+
+    @FXML
     private ImageView loginCarImg;
 
     @FXML
-    private Button loginButton;
+    private JFXButton loginButton;
 
-    @FXML
-    private TextField userNameTextField;
 
-    @FXML
-    private TextField passwordTextField;
 
 
     public void initialize() {
-        ScaleTransition transition = new ScaleTransition(Duration.seconds(4.0D), this.loginCarImg);
-        transition.setToX(2.0D);
-        transition.setToY(2.0D);
-        transition.setCycleCount(-1);
-        transition.setAutoReverse(true);
-        transition.play();
     }
 
     @FXML
@@ -52,4 +52,11 @@ public class LoginController {
 
         }
     }
+
+//    @FXML
+//    void openRegistrationForm(MouseEvent event) throws IOException {
+//        AnchorPane registrationPane = FXMLLoader.load(getClass().getResource("/fxml/registrationForm.fxml"));
+//        signInPane.getChildren().removeAll();
+//        signInPane.getChildren().setAll(fxml);
+//    }
 }
