@@ -50,6 +50,14 @@
     -fx-border-style: solid;
     -fx-border-radius: 3px;
 }
+
+.registrationBackButton{
+    -fx-fill: #31445A;
+}
+
+.registrationBackButton:hover{
+    -fx-fill: #00C0EF;
+}
 /*Tabpane header */
 .jfx-tab-pane .headers-region{
     -fx-background-color:transparent;
