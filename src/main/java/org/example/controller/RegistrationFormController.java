@@ -1,17 +1,66 @@
 package org.example.controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import org.example.database.Crud;
+import org.example.main.LoginApp;
+
+import java.io.IOException;
 
 public class RegistrationFormController {
+    Crud crud = new Crud();
 
     @FXML
-    private ImageView backImageButton;
+    private Label backLabel;
 
     @FXML
-    void backToSignIn(MouseEvent event) {
+    private JFXTextField firstNameTextField;
+
+    @FXML
+    private JFXTextField lastNameTextField;
+
+    @FXML
+    private JFXPasswordField passwordTextField;
+
+    @FXML
+    private JFXTextField emailTextField;
+
+    @FXML
+    private JFXPasswordField confirmPasswordTextField;
+
+    @FXML
+    private JFXButton registerButton;
+
+    @FXML
+    private Label registerMsgLabel;
+
+    @FXML
+    public void registerButtonOnAction(javafx.event.ActionEvent actionEvent) {
+        String firstName = firstNameTextField.getText();
+        String lastName = lastNameTextField.getText();
+        String email = emailTextField.getText().toString();
+        String password = passwordTextField.getText().toString();
+        String confirmPassword = confirmPasswordTextField.getText().toString();
+
+        if (password.equals(confirmPassword)) {
+            crud.createTable();
+            crud.insert(firstName, lastName, email, password, confirmPassword);
+        } else {
+            registerMsgLabel.setText("Please make sure yours passwords match");
+        }
+
 
     }
 
+    @FXML
+    void backToLogin(MouseEvent event) throws IOException {
+        AnchorPane loginPane = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+        LoginApp.stage.getScene().setRoot(loginPane);
+    }
 }

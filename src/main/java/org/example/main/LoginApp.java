@@ -8,6 +8,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class LoginApp extends Application {
+    public static Stage stage = null;
 
     public static void main(String[] args) {
         launch(args);
@@ -19,6 +20,7 @@ public class LoginApp extends Application {
         Scene scene = new Scene(mainPane);
         stage.setScene(scene);
         stage.setTitle("Transport Management System");
+        this.stage = stage;
         stage.show();
 
     }

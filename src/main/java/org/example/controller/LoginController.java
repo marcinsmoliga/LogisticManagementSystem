@@ -6,11 +6,14 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import org.example.database.ConnectionDB;
+import org.example.database.Crud;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -34,10 +37,10 @@ public class LoginController {
     @FXML
     private JFXButton loginButton;
 
+    Crud crud = new Crud();
+
 
     public void initialize() {
-        Connection connectDB = ConnectionDB.connectDB();
-        System.out.println("Connected");
     }
 
     @FXML
@@ -50,13 +53,7 @@ public class LoginController {
             validateLogin();
         }
         try {
-//            loginMsgLabel.setText("You try login");
-//            this.loginButton.getScene().getWindow().hide();
-//            AnchorPane root = FXMLLoader.load(this.getClass().getResource("/fxml/menu.fxml"));
-//            Scene scene = new Scene(root);
-//            Stage driverStage = new Stage();
-//            driverStage.setScene(scene);
-//            driverStage.show();
+//
         } catch (Exception e) {
             System.out.println("error");
 
@@ -65,10 +62,10 @@ public class LoginController {
 
     public void validateLogin() {
 
-        Connection connectDB = ConnectionDB.connectDB();
+        Connection connectDB = ConnectionDB.connect();
         System.out.println("Connected");
         String verifyLogin = "SELECT COUNT(1) FROM users WHERE email = '" + emailTextField.getText()
-                             + "' AND password = '" + passwordTextField.getText() + "'";
+                + "' AND password = '" + passwordTextField.getText() + "'";
 
 
         try {
@@ -78,6 +75,7 @@ public class LoginController {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     System.out.println("SUCCESS");
+                    showLoginWindow();
                 } else {
                     loginMsgLabel.setText("Invalid login. Please try again.");
                 }
@@ -94,4 +92,19 @@ public class LoginController {
         signInPane.getChildren().removeAll();
         signInPane.getChildren().setAll(registrationPane);
     }
+
+    private void showLoginWindow() throws IOException {
+        this.loginButton.getScene().getWindow().hide();
+        AnchorPane root = FXMLLoader.load(this.getClass().getResource("/fxml/menu.fxml"));
+        Scene scene = new Scene(root);
+        Stage driverStage = new Stage();
+        driverStage.setScene(scene);
+        driverStage.show();
+    }
+
+
+//    @FXML
+//    private void register(MouseEvent mouseEvent) {
+//        crud.insert();
+//    }
 }
