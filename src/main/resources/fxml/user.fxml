@@ -1,86 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <VBox prefHeight="400.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@../css/style.css">
          <children>
-            <VBox>
+            <Pane prefHeight="84.0" prefWidth="200.0">
                <children>
-                  <AnchorPane prefHeight="100.0" prefWidth="1100.0" styleClass="gradient-light" />
-                  <TabPane prefHeight="550.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE">
-                     <tabs>
-                        <Tab text="Add User">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <HBox prefHeight="519.0" prefWidth="1100.0">
-                                       <children>
-                                          <AnchorPane prefHeight="91.0" prefWidth="350.0">
-                                             <children>
-                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="84.0" text="User Details" />
-                                                <TextField layoutX="84.0" layoutY="79.0" />
-                                                <TextField layoutX="84.0" layoutY="260.0" />
-                                                <TextField layoutX="84.0" layoutY="326.0" />
-                                                <TextField layoutX="84.0" layoutY="169.0" />
-                                                <Label layoutX="129.0" layoutY="54.0" text="Gender" />
-                                                <Label layoutX="112.0" layoutY="231.0" text="Date of Birth" />
-                                                <Label layoutX="126.0" layoutY="140.0" text="Martial Status" />
-                                                <Label layoutX="105.0" layoutY="300.0" prefHeight="18.0" prefWidth="98.0" text="Phone" />
-                                             </children>
-                                          </AnchorPane>
-                                          <AnchorPane prefHeight="200.0" prefWidth="350.0">
-                                             <children>
-                                                <Label prefHeight="31.0" prefWidth="124.0" text="User Premissions" />
-                                                <TextField layoutX="113.0" layoutY="79.0" />
-                                                <Label layoutX="147.0" layoutY="52.0" text="Status" />
-                                             </children>
-                                          </AnchorPane>
-                                          <AnchorPane prefHeight="200.0" prefWidth="300.0">
-                                             <children>
-                                                <Label layoutX="76.0" layoutY="272.0" text="First Name" />
-                                                <TextField layoutX="68.0" layoutY="307.0" />
-                                                <AnchorPane layoutX="100.0" layoutY="442.0" prefHeight="62.0" prefWidth="142.0">
-                                                   <children>
-                                                      <Button layoutX="74.0" layoutY="18.0" mnemonicParsing="false" text="Save" />
-                                                   </children>
-                                                </AnchorPane>
-                                                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../image/userPhoto.png" />
-                                                   </image>
-                                                </ImageView>
-                                                <Label layoutX="76.0" layoutY="348.0" text="Last Name" />
-                                                <TextField layoutX="68.0" layoutY="381.0" />
-                                             </children>
-                                          </AnchorPane>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
-                        <Tab text="Show All Users">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                           </content>
-                        </Tab>
-                     </tabs>
-                  </TabPane>
+                  <Button layoutY="2.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="60.0" />
+                  <FontAwesomeIcon glyphName="HOME" layoutX="3.0" layoutY="43.0" size="4em" text="" wrappingWidth="53.28574240207672" />
+                  <Label layoutX="100.0" layoutY="25.0" prefHeight="35.0" prefWidth="60.0" text="TMS" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="27.0" />
+                     </font></Label>
                </children>
-            </VBox>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="HOME">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="UPDATE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIcon text="" />
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="REMOVE">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIcon text="" />
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="ALL USERS">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIcon text="" />
+               </graphic>
+            </Button>
          </children>
-      </AnchorPane>
+      </VBox>
+      <VBox layoutX="200.0" layoutY="100.0" prefHeight="295.0" prefWidth="398.0" />
+      <GridPane layoutX="208.0" layoutY="132.0" prefHeight="239.0" prefWidth="391.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="115.20001220703125" minHeight="10.0" prefHeight="38.399993896484375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="201.60000610351562" minHeight="10.0" prefHeight="201.60000610351562" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView prefHeight="200.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@../css/style.css" GridPane.rowIndex="1">
+              <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="75.0" text="First Name" />
+                  <TableColumn prefWidth="75.0" text="Last Name" />
+                  <TableColumn prefWidth="75.0" text="Email" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="39.0" prefWidth="391.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Button" />
+                  <TextField />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Pane layoutX="199.0" layoutY="39.0" prefHeight="84.0" prefWidth="400.0" styleClass="sidebar" stylesheets="@../css/style.css" />
    </children>
-</StackPane>
+</AnchorPane>
