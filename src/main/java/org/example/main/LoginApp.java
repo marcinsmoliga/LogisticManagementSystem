@@ -16,11 +16,11 @@ public class LoginApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        AnchorPane mainPane = FXMLLoader.load(getClass().getResource("/fxml/vehicles.fxml"));
+        AnchorPane mainPane = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         Scene scene = new Scene(mainPane);
         stage.setScene(scene);
         stage.setTitle("Transport Management System");
-//        this.stage = stage;
+        this.stage = stage;
         stage.show();
 
     }

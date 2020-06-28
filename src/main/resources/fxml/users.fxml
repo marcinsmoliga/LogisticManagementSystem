@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="vehiclesRootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.VehiclesController">
+<AnchorPane fx:id="usersRootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UsersController">
    <children>
       <VBox prefHeight="600.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@../css/style.css">
          <children>
@@ -32,7 +32,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="ALL VEHICLES">
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="ALL USERS">
                <padding>
                   <Insets left="30.0" />
                </padding>
@@ -40,7 +40,7 @@
                   <FontAwesomeIcon glyphName="CAR" text="" />
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="LORRIES">
+            <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="DRIVERS">
                <padding>
                   <Insets left="30.0" />
                </padding>
@@ -48,7 +48,7 @@
                   <FontAwesomeIcon glyphName="CAR" text="" />
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="SEMITRAILERS">
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="FREIGHT FORWARDERS">
                <padding>
                   <Insets left="30.0" />
                </padding>
@@ -56,7 +56,7 @@
                   <FontAwesomeIcon text="" />
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="VANS">
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" text="CLIENTS">
                <padding>
                   <Insets left="30.0" />
                </padding>
@@ -80,20 +80,20 @@
                   <TableColumn fx:id="idTableColumn" prefWidth="34.4000244140625" text="ID" />
                   <TableColumn fx:id="vrnTableColumn" prefWidth="83.20001220703125" text="VRN" />
                   <TableColumn fx:id="mileageTableColumn" prefWidth="87.20001220703125" text="MILAGE" />
-                  <TableColumn fx:id="purchaseTableColumn" prefWidth="110.4000244140625" text="PURCHASE DATE" />
-                  <TableColumn fx:id="locationTableColumn" prefWidth="90.4000244140625" text="LOCATION" />
+                  <TableColumn fx:id="purchaseTableColumn" prefWidth="98.4000244140625" text="PURCHASE DATE" />
+                  <TableColumn fx:id="locationTableColumn" prefWidth="75.0" text="LOCATION" />
                </columns>
             </TableView>
             <HBox prefHeight="67.0" prefWidth="546.0">
                <children>
                   <FontAwesomeIcon fill="#360a0f" glyphName="SEARCH" size="1.8em" wrappingWidth="32.80006408691406" />
                   <TextField fx:id="searchField" prefHeight="26.0" prefWidth="156.0" />
-                  <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="314.0" text="ADD NEW VEHICLE TO DATABASE" />
+                  <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="314.0" text="ADD NEW USER TO DATABASE" />
                </children>
             </HBox>
          </children>
       </GridPane>
-      <Pane layoutX="200.0" prefHeight="84.0" prefWidth="526.0" styleClass="sidebar" stylesheets="@../css/style.css" />
+      <Pane layoutX="200.0" prefHeight="84.0" prefWidth="527.0" styleClass="sidebar" stylesheets="@../css/style.css" />
       <AnchorPane layoutX="725.0" prefHeight="600.0" prefWidth="232.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="41.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
@@ -101,10 +101,10 @@
                   <Image url="@../image/userPhoto.png" />
                </image>
             </ImageView>
-            <TextField layoutX="42.0" layoutY="198.0" promptText="VRN" />
+            <TextField layoutX="42.0" layoutY="198.0" promptText="Full Name" />
             <Button layoutX="42.0" layoutY="549.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Edit" />
             <Button layoutX="131.0" layoutY="550.0" mnemonicParsing="false" text="Remove" />
-            <TextField layoutX="42.0" layoutY="246.0" promptText="Vehicle Type" />
+            <TextField layoutX="42.0" layoutY="246.0" promptText="User Type" />
          </children>
       </AnchorPane>
    </children>

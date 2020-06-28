@@ -44,9 +44,9 @@ public class RegistrationFormController {
     public void registerButtonOnAction(javafx.event.ActionEvent actionEvent) {
         String firstName = firstNameTextField.getText();
         String lastName = lastNameTextField.getText();
-        String email = emailTextField.getText().toString();
-        String password = passwordTextField.getText().toString();
-        String confirmPassword = confirmPasswordTextField.getText().toString();
+        String email = emailTextField.getText();
+        String password = passwordTextField.getText();
+        String confirmPassword = confirmPasswordTextField.getText();
 
         if (password.equals(confirmPassword)) {
             crud.createTable();
